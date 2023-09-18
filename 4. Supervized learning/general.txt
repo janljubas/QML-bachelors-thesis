@@ -1,0 +1,52 @@
+SUPERVISED LEARNING
+
+Supervised learning is an ML branch which involves input-output pairs as a base of training set from which our model learns.
+The most of the time the model is estimating a function based on the data or grouping the datapoints into categories(classes).
+
+The model's performance is calculated using a certain portion of data examples called test set.
+
+The 2 mentioned types of problems we use supervised learning on are CLASSIFICATION and REGRESSION.
+
+
+The focus of much recent research in near term quantum supervised learning has been in classification,
+and with two methods in particular:
+
+-> quantum variational classification
+-> quantum kernel estimation
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+1. QUANTUM VARIATIONAL CLASSIFICATION (DETAILS IN NEXT CHAPTER)
+
+Given an input set X and quantum Hilbert space H, we encode data points x_i ∈ X into quantum state using the quantum feature map,
+i.e.  U_φ : X -> H , then process this state with a parameterized quantum circuit W(Φ).
+
+The resultant states become | ψ(x_i, Φ) ⟩ = W(Φ) * | φ(x_i) ⟩ , where parameters are estimated by training to match the target
+states |y_i⟩ that represent the y_i labels od the training points.
+
+[ scheme 1 ]
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+2. QUANTUM KERNEL ESTIMATION (DETAILS IN CHAPTER 6)
+
+Given an input set X and quantum Hilbert space H, data points x_i ∈ X are encoded into quantum state using the
+quantum feature map, i.e.  U_φ : X -> H.
+
+The inner product of 2 quantum encoded quantum states define a kernel:
+        K (x_i, x_j) ≡ ⟨ φ(x_i) | φ(x_j) ⟩_H ,
+which is analogous to a kernel in classical machine learning.
+
+[ scheme 2 ]
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Both methods require a way to encode the data into a quantum state. There are several strategies to define the 
+quantum feature map or encoding, as discussed in a previous section. 
+
+It is a key step in the success of the classification task, and to eventually obtain any quantum advantage, we need the
+feature map to be classically intractable!
