@@ -80,6 +80,5 @@ qc_nlocal = NLocal(num_qubits=10, rotation_blocks=rot,
 qc_nlocal.decompose().draw(output='mpl').show()
 
 
-
 input("Press Enter to close the window...")
 
